@@ -1,0 +1,27 @@
+---
+description: use this rule for Python linting guidance
+globs: 
+alwaysApply: false
+---
+# Python Linter Rule - Ruff
+
+## Linter Information
+- Use the Ruff linter for Python code
+- Version: latest
+- Configuration in pyproject.toml
+
+## When to Trigger
+- **ALWAYS run after any Python file edit is completed**
+- Run before committing code
+- Run when checking code quality
+
+## How to Run
+- Run with: `uv run ruff check --fix .`
+- Always use the --fix parameter to automatically fix issues when possible
+- For specific files: `uv run ruff check --fix path/to/file.py`
+
+## Actions
+- Run linter after making any code changes
+- Fix all linter issues before committing
+- Respect existing configuration in pyproject.toml
+- For severe issues that can't be auto-fixed, describe the problem and suggest solutions

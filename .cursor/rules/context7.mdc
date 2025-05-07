@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Context7 MCP Usage Rule
+
+- Use Context7 MCP for retrieving up-to-date library documentation
+- Always resolve library IDs before fetching documentation
+- Follow the two-step process:
+  1. First call `mcp_context7_resolve-library-id` with the library name
+  2. Then call `mcp_context7_get-library-docs` with the resolved ID
+
+## When to Use
+- When needing documentation for external libraries
+- When answering questions about library usage
+- When implementing code that uses external packages

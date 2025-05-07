@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Python Execution Rule - UV
+
+- Always use the `uv run` command instead of `python` to execute Python scripts
+- Correct format: `uv run path/to/script.py [arguments]`
+- Never use plain `python script.py` commands
+
+## Examples
+- Instead of: `python script.py`
+- Use: `uv run script.py`
+
+- Instead of: `python -m module_name`
+- Use: `uv run -m module_name`
+
+- Instead of: `python script.py --arg1 value1`
+- Use: `uv run script.py --arg1 value1`

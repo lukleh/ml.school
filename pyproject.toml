@@ -25,6 +25,7 @@ dependencies = [
     "evidently==0.6.7",
     "scikit-learn==1.6.1",
     "tensorflow==2.18.0",
+    "python-dotenv>=1.1.0",
 ]
 
 [tool.ruff]
