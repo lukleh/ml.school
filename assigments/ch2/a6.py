@@ -83,8 +83,12 @@ class DataVisualizationFlow(FlowSpec):
         # Create a scatter plot
         fig1, ax1 = plt.subplots(figsize=(10, 6))
         scatter = ax1.scatter(
-            self.df["x"], self.df["y"], c=self.df["cluster"],
-            cmap="viridis", alpha=0.8, s=50,
+            self.df["x"],
+            self.df["y"],
+            c=self.df["cluster"],
+            cmap="viridis",
+            alpha=0.8,
+            s=50,
         )
         ax1.set_title("Generated Clusters", fontsize=16)
         ax1.set_xlabel("X", fontsize=12)

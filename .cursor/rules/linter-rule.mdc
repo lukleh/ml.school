@@ -1,6 +1,6 @@
 ---
-description: use this rule for Python linting guidance
-globs: 
+description: 
+globs: *.py
 alwaysApply: false
 ---
 # Python Linter Rule - Ruff

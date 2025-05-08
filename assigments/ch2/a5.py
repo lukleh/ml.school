@@ -8,9 +8,9 @@ from metaflow import FlowSpec, Parameter, current, retry, step
 class RetryFlow(FlowSpec):
     """A flow that demonstrates the use of the @retry decorator."""
 
-    num_jobs = Parameter("num_jobs",
-                            help="Number of times to run the flaky service",
-                            default=5)
+    num_jobs = Parameter(
+        "num_jobs", help="Number of times to run the flaky service", default=5
+    )
 
     @step
     def start(self):

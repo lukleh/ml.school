@@ -3,6 +3,7 @@
 This module contains a Metaflow flow that processes CSV files and reports information
 about their structure and content, with robust error handling.
 """
+
 import csv
 from io import StringIO
 
@@ -20,7 +21,7 @@ class CSVProcessingFlow(FlowSpec):
     csv_file = IncludeFile(
         "csv_file",
         help="CSV file to process",
-        default="../../data/sample.csv"  # Updated path
+        default="../../data/sample.csv",  # Updated path
     )
 
     @step

@@ -21,12 +21,10 @@ class PromptResponseFlow(FlowSpec):
         help="The text prompt to send to the LLM",
         default="""You are a helpful assistant that always responds in a
                 structured JSON format with separate "thought" and "answer" fields.
-                Tell me a short joke about programming"""
+                Tell me a short joke about programming""",
     )
 
-    model = Parameter("model",
-                     help="The LLM model to use",
-                     default="qwen3:8b")
+    model = Parameter("model", help="The LLM model to use", default="qwen3:8b")
 
     @step
     def start(self):
@@ -48,9 +46,9 @@ class PromptResponseFlow(FlowSpec):
                 "prompt": self.prompt,
                 "stream": False,
                 "format": "json",
-                "options": {"temperature": 0.8}
+                "options": {"temperature": 0.8},
             },
-            timeout=60  # Add timeout for safety
+            timeout=60,  # Add timeout for safety
         )
         response.raise_for_status()
 

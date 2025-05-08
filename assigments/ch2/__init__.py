@@ -1,1 +1,1 @@
-"""Ch2 package initialization.""" 
+"""Ch2 package initialization."""

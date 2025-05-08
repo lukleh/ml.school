@@ -45,9 +45,9 @@ class StudentProcessingFlow(FlowSpec):
                 "model": "qwen3:8b",
                 "prompt": prompt,
                 "stream": False,
-                "format": "json"
+                "format": "json",
             },
-            timeout=60  # Add timeout for safety
+            timeout=60,  # Add timeout for safety
         )
         response.raise_for_status()
 

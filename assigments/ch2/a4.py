@@ -1,13 +1,14 @@
 """Module for squaring numbers using Metaflow."""
+
 from metaflow import FlowSpec, Parameter, step
 
 
 class SquareNumbersFlow(FlowSpec):
     """A flow that squares each number in a list using foreach."""
 
-    numbers = Parameter("numbers",
-                        help="Comma-separated list of numbers to square",
-                        default="1,2,3,4,5")
+    numbers = Parameter(
+        "numbers", help="Comma-separated list of numbers to square", default="1,2,3,4,5"
+    )
 
     @step
     def start(self):
@@ -25,7 +26,7 @@ class SquareNumbersFlow(FlowSpec):
         # Get the current item being processed in this foreach branch
         self.input_number = self.input
         # Calculate the square of the input number
-        self.squared_result = self.input_number ** 2
+        self.squared_result = self.input_number**2
         print(f"Squaring {self.input_number} = {self.squared_result}")
 
         self.next(self.join)

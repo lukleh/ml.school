@@ -1,4 +1,5 @@
 """Metaflow example demonstrating parallel branching and joining."""
+
 from metaflow import FlowSpec, step
 
 
